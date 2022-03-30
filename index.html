@@ -124,7 +124,7 @@
   <head>
     <title>Neural 3D Video Synthesis</title>
     <meta property="og:image" content="" />
-    <meta property="og:title" content="Neural 3D Video Synthesis" />
+    <meta property="og:title" content="Neural 3D Video Synthesis from Multi-view Video" />
   </head>
 
   <!-- ----------------------------------------------------------------------------- -->
@@ -132,20 +132,23 @@
   <body>
     <br>
     <!-- <center> -->
-      <center><span style="font-size:45px">Neural 3D Video Synthesis</span></center>
+      <center><span style="font-size:45px">Neural 3D Video Synthesis from Multi-view Video</span></center>
+      <br>
+      <center><span style="font-size:25px">CVPR 2022 (oral)</span></center>
       <br>
       <table align=center width=900px>
         <tr>
           <td align=center width=250px>
             <span style="font-size:20px"><a href="https://tianyeli.github.io/">Tianye Li</a><sup>1,3,*</sup></span>&nbsp;&nbsp;&nbsp;
             <span style="font-size:20px"><a href="https://scholar.google.de/citations?user=cJKcPcIAAAAJ&hl=en">Mira Slavcheva</a><sup>1,*</sup></span>&nbsp;&nbsp;&nbsp;
-            <span style="font-size:20px"><a href="https://zollhoefer.com/">Michael Zollhoefer</a><sup>1</sup></span>&nbsp;&nbsp;&nbsp;
+            <span style="font-size:20px"><a href="https://zollhoefer.com/">Michael Zollhoefer</a><sup>1</sup></span>&nbsp;&nbsp;&nbsp;<br>
             <span style="font-size:20px"><a href="https://scholar.google.com/citations?user=VmHZtsEAAAAJ&hl=en">Simon Green</a><sup>1</sup></span>&nbsp;&nbsp;&nbsp;
-            <span style="font-size:20px"><a href="https://christophlassner.de/">Christoph Lassner</a><sup>1</sup></span>&nbsp;&nbsp;&nbsp;<br>
+            <span style="font-size:20px"><a href="https://christophlassner.de/">Christoph Lassner</a><sup>1</sup></span>&nbsp;&nbsp;&nbsp;
             <span style="font-size:20px"><a href="https://changilkim.com/">Changil Kim</a><sup>2</sup></span>&nbsp;&nbsp;&nbsp;
-            <span style="font-size:20px"><a href="https://tschmidt23.github.io/">Tanner Schmidt</a><sup>1</sup></span>&nbsp;&nbsp;&nbsp;
+            <span style="font-size:20px"><a href="https://tschmidt23.github.io/">Tanner Schmidt</a><sup>1</sup></span>&nbsp;&nbsp;&nbsp;<br>
             <span style="font-size:20px"><a href="https://scholar.google.com/citations?hl=en&user=JVum8voAAAAJ">Steven Lovegrove</a><sup>1</sup></span>&nbsp;&nbsp;&nbsp;
             <span style="font-size:20px"><a href="https://scholar.google.com/citations?user=56UhAooAAAAJ&hl=en">Michael Goesele</a><sup>1</sup></span>&nbsp;&nbsp;&nbsp;
+            <span style="font-size:20px"><a href="https://scholar.google.com/citations?user=MhowvPkAAAAJ">Richard Newcombe</a><sup>1</sup></span>&nbsp;&nbsp;&nbsp;            
             <span style="font-size:20px"><a href="https://lvzhaoyang.github.io/">Zhaoyang Lv</a><sup>1</sup></span>
           </td>
         </tr>
@@ -153,27 +156,27 @@
 
       <table align=center width=1000px>
         <tr>
-          <td align=center width=50px>
+          <td align=center width=100px>
             <center>
               <span style="font-size:20px"></span>
             </center>
           </td>
-          <td align=center width=500px>
+          <td align=center width=350px>
             <center>
-              <span style="font-size:20px"><sup>1</sup>Facebook Reality Labs Research</span>
+              <span style="font-size:20px"><sup>1</sup>Reality Labs Research</span>
             </center>
           </td>
-          <td align=center width=200px>
+          <td align=center width=50px>
             <center>
-              <span style="font-size:20px"><sup>2</sup>Facebook</span>
+              <span style="font-size:20px"><sup>2</sup>Meta</span>
             </center>
           </td>
-          <td align=center width=500px>
+          <td align=center width=400px>
             <center>
               <span style="font-size:20px"><sup>3</sup>University of Southern California</span>
             </center>
           </td>
-          <td align=center width=50px>
+          <td align=center width=100px>
             <center>
               <span style="font-size:20px"></span>
             </center>
@@ -181,24 +184,29 @@
         </tr>
       </table>
 
-      <center><span style="font-size:20px;line-height:2.0">* equal contributions</span><br></center>
+      <center><span style="font-size:20px;line-height:2.0">*equal contributions</span><br></center>
 
       <center>
       <table>
         <tr>
-          <td align=center width=200px> <span style="font-size:15pt">
+          <td style="vertical-align:bottom" width=150px> <span style="font-size:15pt">
             <center>
               <a href="./resources/paper.pdf">[Paper]</a>
             </center>
           </td>
-          <td align=center width=200px> <span style="font-size:15pt">
+          <td style="vertical-align:bottom" width=150px> <span style="font-size:15pt">
             <center>
               <a href="https://arxiv.org/abs/2103.02597">[ArXiv]</a>
             </center>
           </td>
-          <td align=center width=200px> <span style="font-size:15pt">
+          <td style="vertical-align:bottom" width=150px> <span style="font-size:15pt">
             <center>
-              <a href="#">[Data (Coming Soon)]</a>
+              <a href="./resources/supp.pdf">[Sup. Mat.]</a>
+            </center>
+          </td>
+          <td style="vertical-align:bottom" width=150px> <span style="font-size:15pt">
+            <center>
+              <a href="https://github.com/facebookresearch/Neural_3D_Video">[Data]</a>
             </center>
           </td>
         </tr>
@@ -211,7 +219,7 @@
     <!-- ----------------------------------------------------------------------------- -->
 
     <table align=center width=900px>
-      <center><h1>Abstract</h1></center>
+      <center><h2>Abstract</h2></center>
       <tr>
         We propose a novel approach for 3D video synthesis that is able to represent multi-view video recordings of a dynamic real-world scene in a compact, yet expressive representation that enables high-quality view synthesis and motion interpolation.
         Our approach takes the high quality and compactness of static neural radiance fields in a new direction: to a model-free, dynamic setting.
@@ -219,6 +227,7 @@
         To exploit the fact that changes between adjacent frames of a video are typically small and locally consistent, we propose two novel strategies for efficient training of our neural network: 1) An efficient hierarchical training scheme, and 2) an importance sampling strategy that selects the next rays for training based on the temporal variation of the input videos.
         In combination, these two strategies significantly boost the training speed, lead to fast convergence of the training process, and enable high quality results. Our learned representation is highly compact and able to represent a 10 second 30 FPS multi-view video recording by 18 cameras with a model size of just 28MB.
         We demonstrate that our method can render high-fidelity wide-angle novel views at over 1K resolution, even for highly complex and dynamic scenes. We perform an extensive qualitative and quantitative evaluation that shows that our approach outperforms the current state of the art.
+        Project website: <a href="https://neural-3d-video.github.io">https://neural-3d-video.github.io</a>.
         <br>
       </tr>
       <br>
@@ -226,7 +235,7 @@
       <hr>
     <!-- ----------------------------------------------------------------------------- -->
 
-      <center><h1>Video</h1></center>
+      <center><h2>Video</h2></center>
 
       <table align=center width=900px>
         <tr>
@@ -246,11 +255,11 @@
       <hr>
     <!-- ----------------------------------------------------------------------------- -->
 
-      <center><h1>Acknowledgements</h1></center>
+      <center><h2>Acknowledgements</h2></center>
 
       <table align=center width=900px>
         <tr>
-          We thank Richard Newcombe, Rick Szeliski, Anton Kaplanyan, Brian Cabral, Zhao Dong, Samir Aroudj for providing feedback to this project, Daniel Andersen for helping with photorealism evaluation, Joey Conrad and Shobhit Verma
+          We thank Rick Szeliski, Anton Kaplanyan, Brian Cabral, Zhao Dong, Samir Aroudj for providing feedback to this project, Daniel Andersen for helping with photorealism evaluation, Joey Conrad and Shobhit Verma
 for designing and building our capture rig.
           We thank the website template from <a href="https://taesung.me/SwappingAutoencoder/">here</a>.
         </tr>
